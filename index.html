@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Aim Training | Проект 5</title>
+</head>
+
+<body>
+  <div class="screen">
+    <h1>Aim Training</h1>
+    <p>I'm lazy to write media queries sorry</p>
+    <a href="#" id='startBtn' class="start">Начать игру</a>
+  </div>
+
+  <div class="screen">
+    <h1>Выберите время</h1>
+    <ul id='time-list' class="time-list">
+      <li>
+        <button class="time-btn">
+          10 сек
+        </button>
+      </li>
+      <li>
+        <button class="time-btn">
+          20 сек
+        </button>
+      </li>
+      <li>
+        <button class="time-btn">
+          30 сек
+        </button>
+      </li>
+      <li>
+        <button class="time-btn">
+          60 сек
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="screen">
+    <h2>Chose settings</h2>
+    <div class="circleSizeContainer">
+      <div class="slidecontainer">
+        <h3>Minimum target size:</h3>
+        <input type="range" min="1" max="100" value="10" class="slider" id="minSize">
+        <div class="circlePreview">
+          <div class="circle" id='minCircle'></div>
+        </div>
+      </div>
+      <div class="slidecontainer">
+        <h3>Maximum target size:</h3>
+        <input type="range" min="1" max="100" value="70" class="slider" id="maxSize">
+        <div class="circlePreview">
+          <div class="circle" id='maxCircle'></div>
+        </div>
+      </div>
+    </div>
+    <button class="time-btn" id='sizeSettingsBtn'>Continue</button>
+  </div>
+
+  <div class="screen">
+    <div class="circleSizeContainer">
+      <div class="container">
+        <h3>Colorfull targets?</h3>
+        <div class="colorfullTargets">
+          <input type="checkbox" id="colorfullTargetsInput">
+          <label for="colorfullTargetsInput"></label>
+        </div>
+      </div>
+      <div class="container">
+        <h3>Turbo mode?</h3>
+        <div class="colorfullTargets">
+          <input checked=false type="checkbox" id="turboModeInput">
+          <label for="turboModeInput"></label>
+        </div>
+      </div>
+    </div>
+    <button class="time-btn" id='otherSettingsBtn'>Continue</button>
+  </div>
+
+  <div class="screen">
+    <h3>Осталось <span id="time">00:00</span></h3>
+    <div class="board" id="board">
+      <div id='score'></div>
+      <div>
+        <button class="time-btn hideDisplay" id='restartBtn'>Restart</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
